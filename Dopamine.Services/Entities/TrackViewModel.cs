@@ -45,6 +45,9 @@ namespace Dopamine.Services.Entities
         // SortArtistName is used to sort by ArtistName, then by AlbumTitle, then by TrackNumber.
         public string SortArtistName => this.ArtistName + this.AlbumTitle + this.Track.TrackNumber.Value.ToString("0000");
 
+        // SortModificationDate is used to sort by ModificationDate
+        public long SortModificationDate => this.Track.DateFileCreated;
+
         public long SortBitrate => this.Track.BitRate.GetValueOrZero();
 
         public string SortPlayCount => this.Track.PlayCount.HasValueLargerThan(0) ? this.Track.PlayCount.Value.ToString("0000") : string.Empty;

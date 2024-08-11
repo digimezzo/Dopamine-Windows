@@ -170,6 +170,9 @@ namespace Dopamine.ViewModels.Common.Base
                 case TrackOrder.ByRating:
                     this.trackOrderText = ResourceUtils.GetString("Language_By_Rating");
                     break;
+                case TrackOrder.ByModification:
+                    this.trackOrderText = ResourceUtils.GetString("Language_By_Date_Created");
+                    break;
                 default:
                     // Cannot happen, but just in case.
                     this.trackOrderText = ResourceUtils.GetString("Language_By_Album");

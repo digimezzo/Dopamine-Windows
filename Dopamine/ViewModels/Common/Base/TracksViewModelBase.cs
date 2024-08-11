@@ -587,6 +587,9 @@ namespace Dopamine.ViewModels.Common.Base
                     this.TrackOrder = TrackOrder.ByAlbum;
                     break;
                 case TrackOrder.ByAlbum:
+                    this.TrackOrder = TrackOrder.ByModification;
+                    break;
+                case TrackOrder.ByModification:
                     if (SettingsClient.Get<bool>("Behaviour", "EnableRating"))
                     {
                         this.TrackOrder = TrackOrder.ByRating;
